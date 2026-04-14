@@ -1,10 +1,9 @@
 def f(x):
-    d = []
-    for i in range(1, int(x ** .5) + 1):
+    d = {1}
+    for i in range(2, int(x ** .5) + 1):
         if x % i == 0:
-            d.append(i)
-            if x // i != x:
-                d.append(x // i)
+            d.add(i)
+            d.add(x // i)
     return sum(d)//len(d)
 cnt = 0
 num = 770000

@@ -35,3 +35,26 @@ num_hex = 'f01'
 print(int(num_bin, 2))
 print(int(num_tri, 3))
 print(int(num_hex, 16))
+# срезы
+# взятие двух первых цифр
+data = '7777'
+print(data[:2])
+# взятие без двух первых цифр
+print(data[2:])
+# взятие двух последних цифр
+print(data[-2:])
+# взятие без двух последних цифр
+print(data[:-2])
+# сумма цифр числа
+# двоичная система
+num1 = '1010'
+sum1 = num1.count('1')
+# любая система до 10 вкл
+num2 = '1210'
+sum2 = sum(map(int, num2))
+# люба система до 36 вкл
+num3 ='AF5'
+sum3 = sum(map(lambda x: int(x, 36), num3))
+print(sum3)
+
+
