@@ -18,7 +18,7 @@ losers = []
 for i in info[N // 3 + cnt:]:
     if i[1] > 0:
         losers.append(i)
-losers = losers[len(losers) // 10]
+dop = losers[len(losers) // 10]
 for i in info[N // 3 + cnt:]:
         if losers[-1][1:] == i[1:]:
             losers.append(i)

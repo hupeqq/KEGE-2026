@@ -1,22 +1,24 @@
 def fact(num):
     d = []
     while num % 2 == 0:
-        d.append(2)
+        d += [2]
         num //= 2
     i = 3
-    while i * i < num + 1:
+    while i * i <= num:
         while num % i == 0:
-            d.append(i)
+            d += [i]
             num //= i
         i += 2
     if num > 2:
-        d.append(num)
-    return d
+        d += [num]
+    if sum(1 for i in d if str(i).count('6') == 1) == 2 and len(d) == 2:
+        return d
+    return 0
 num = 6086056
 cnt = 0
 while cnt != 5:
-    if len(fact(num)) == 2 and all(str(i).count('6') == 1 for i in fact(num)):
-        print(num, max(fact(num)))
+    if res := fact(num):
+        print(num, max(res))
         cnt += 1
     num += 1
 
